@@ -36,3 +36,19 @@ select  count(distinct FIRST_NAME) from  EMPLOYEES;
 --task# return number of Employees working in IT_PROG and SA_REP
 select count(*) from EMPLOYEES where JOB_ID in ('IT_PROG','SA_REP');
 select count(*)from EMPLOYEES where SALARY>=6000;
+
+--MAX() and MIN() > returns maximum or minimum value
+
+select min(salary) from Employees;
+select max(salary) from Employees;
+
+--AVG() returns average ;
+select avg(SALARY)from EMPLOYEES;
+
+--ROUND() =round(column, number of decimals) -> it will round the number and after comma we can choose number of decimals
+select round(avg(SALARY)) from EMPLOYEES; -- returns with NO DECIMALS
+select round(avg(SALARY),2)from EMPLOYEES;--returns with 2 DECIMALS
+
+--SUM () -> returns sum of ALL NUMBERS (Total of all numbers)
+select sum(SALARY) from EMPLOYEES;
+
