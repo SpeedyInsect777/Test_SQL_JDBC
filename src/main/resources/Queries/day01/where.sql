@@ -32,22 +32,22 @@ select * from EMPLOYEES where JOB_ID='IT_PROG' or JOB_ID='MK_MAN';
 --keyword "IN" (value1,value2) checks values inside parentheses to check if condition matches
 --it uses OR Logic
 select * from EMPLOYEES where JOB_ID in ('IT_PROG','MK_MAN');
---return Employees with ID number 121,143,156,134
+--Task# return Employees with ID number 121,143,156,134
 --solution1
 select * from EMPLOYEES where EMPLOYEE_ID in (121,143,156,134);
 --solution2
 select * from EMPLOYEES where EMPLOYEE_ID=121 or EMPLOYEE_ID=143 or EMPLOYEE_ID=156 or EMPLOYEE_ID=134;
 
---return where Country_ID is US and IT
+--Task return where Country_ID is US and IT
 select *from COUNTRIES where COUNTRY_ID='US' or COUNTRY_ID='IT';
 select *from COUNTRIES where COUNTRY_ID in ('US','IT');
 
 --keyword "IS NOT"
---return where Country_ID is NOT US and IT
+--Task return where Country_ID is NOT US and IT
 select *from COUNTRIES where COUNTRY_ID not in ('US','IT');
 
 --keyword "is NULL" and "is not Null"
---select Employees where Department_ID is NULL
+--Task select Employees where Department_ID is NULL
 select  *from EMPLOYEES where DEPARTMENT_ID is null;
 select *from EMPLOYEES where DEPARTMENT_ID is not null;
 

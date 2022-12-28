@@ -6,7 +6,7 @@ select avg(salary) from EMPLOYEES where JOB_ID in ('IT_PROG');
 --Solution2
 select avg(salary) from EMPLOYEES where JOB_ID ='IT_PROG';
 
---how many job id we got ?
+--Task# Return total number of job id
 select count(distinct (JOB_ID)) from EMPLOYEES;
 
 
@@ -28,12 +28,12 @@ select  JOB_ID,avg(SALARY),min(SALARY),max(SALARY), sum(SALARY) from EMPLOYEES g
 select  JOB_ID, avg(SALARY),min(SALARY),max(SALARY), sum(SALARY),count(*) from EMPLOYEES group by JOB_ID ;
 
 
---return total salary for each department from Employees table
+--Task return total salary for each department from Employees table
 
 select DEPARTMENT_ID, sum(SALARY),count(*) from EMPLOYEES where DEPARTMENT_ID is not null group by DEPARTMENT_ID;
 
 
---order result based on mas salary in ascending order
+--Task order result based on mas salary in ascending order
 
 select DEPARTMENT_ID,sum(  SALARY ),count(*) from EMPLOYEES where DEPARTMENT_ID is not null group by  DEPARTMENT_ID order by max(SALARY);
 
@@ -43,14 +43,14 @@ GROUP BY  DEPARTMENT_ID ORDER BY MAX(SALARY),MIN (SALARY) DESC ;
 
 
 
- -- display how many departments we have in each locations
+ --Task display how many departments we have in each locations
  select LOCATION_ID, count(*) from DEPARTMENTS
 
 group by LOCATION_ID
 
 order by count(*) desc ;
 
---display how many countries we have in each region !
+--Task# display how many countries we have in each region !
 
 select REGION_ID , count(REGION_ID)  from COUNTRIES
 
