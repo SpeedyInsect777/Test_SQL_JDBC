@@ -22,7 +22,7 @@ select FIRST_NAME,salary, SALARY*12 as annual_salary from EMPLOYEES;
 -- concat (value1, value2) -> Works like Java's String concat () method
 
 -- Task return all email addresses with @gmail.com attached from Employees
-select FIRST_NAME ||' '||LAST_NAME as fullname from EMPLOYEES;
+select FIRST_NAME ||'@'||LAST_NAME as fullname from EMPLOYEES;
 select  CONCAT (FIRST_NAME,CONCAT (' ', LAST_NAME)) AS FULLNAME FROM EMPLOYEES;
 select distinct * from jobs;
 select JOB_TITLE from JOBS;
