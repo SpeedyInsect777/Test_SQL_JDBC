@@ -22,3 +22,4 @@ order by COUNTRY_ID desc ;
 
 select FIRST_NAME ||' makes ' || SALARY as "Employee Salary" from EMPLOYEES;
 ------------------------------------------------------------------------------
+select * from Employees;

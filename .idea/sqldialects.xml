@@ -6,5 +6,6 @@
     <file url="file://$PROJECT_DIR$/src/main/resources/Queries/day01/select.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/Queries/day01/where.sql" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/resources/Queries/day01_Test/test01.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/Queries/day03/view.sql" dialect="GenericSQL" />
   </component>
 </project>
