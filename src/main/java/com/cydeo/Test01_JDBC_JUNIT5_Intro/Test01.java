@@ -25,7 +25,7 @@ public class Test01 {
             for (int i = 1; i < numColumns + 1; i++) {
 
                 System.out.println(resultSet.getString(i) + " | " + resultSetMetaData.getColumnName(i));
-
+/
             }
         }
 
