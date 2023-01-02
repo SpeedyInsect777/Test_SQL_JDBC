@@ -12,20 +12,22 @@ public class Test01 {
     @Test
     public void test01() throws SQLException {
         Connection connection = DriverManager.getConnection(dbURL, dbUserName, dbPassword);
-        Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_READ_ONLY);
-        ResultSet resultSet = statement.executeQuery("select *from regions");//CTRL+ENTER to connect to DATABASE
-        ResultSetMetaData resultSetMetaData= resultSet.getMetaData();
+        Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,
+                ResultSet.CONCUR_READ_ONLY);
+        ResultSet resultSet = statement.executeQuery
+                ("select *from regions");//CTRL+ENTER to connect to DATABASE
+        ResultSetMetaData resultSetMetaData = resultSet.getMetaData();
 
 
         int numColumns = resultSetMetaData.getColumnCount();
-while(resultSet.next()){
+        while (resultSet.next()) {
 
-    for (int i = 1; i <numColumns+1 ; i++) {
+            for (int i = 1; i < numColumns + 1; i++) {
 
-        System.out.println(resultSet.getString(i)+" | "+resultSetMetaData.getColumnName(i));
+                System.out.println(resultSet.getString(i) + " | " + resultSetMetaData.getColumnName(i));
 
-    }
-}
+            }
+        }
 
         resultSet.close();
         statement.close();
