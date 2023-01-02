@@ -40,6 +40,33 @@ public class Day03_MetaData {
         for (int i = 1; i <= columnCount; i++) {
             System.out.println(resultSetMetaData.getColumnName(i));
         }
+
+        /*
+
+        Result set ->Holds table Data
+        rs.next ()  => to iterate through rows
+        rs.getString(ColumnName) =>
+
+        resultSetMetaData => it holds table info (Column Name, Column Count)
+
+        rsmd.getColumnCount() => Returns numbers of Columns
+
+        rsmd.getColumnName() => Returns specified Column Name
+
+         */
+
+
+        while(resultSet.next()){
+
+            for (int i = 1; i <= resultSetMetaData.getColumnCount(); i++) {
+
+                System.out.println(resultSetMetaData.getColumnName(i)+" - "+resultSet.getString(i)+" ");
+            }
+
+        }
+
+
+
         resultSet.close();
         statement.close();
         connection.close();
